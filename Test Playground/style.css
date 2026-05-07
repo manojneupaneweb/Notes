@@ -1,0 +1,16 @@
+* {
+
+    background-color: bisque;
+}
+.box{
+    display: flex;
+   justify-content: space-around;
+
+    height: 100vh;
+}
+.box-item{
+    width: 100px;
+    height: 100px;
+    background-color: brown; margin: 10px;
+
+}
