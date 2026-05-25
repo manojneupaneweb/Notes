@@ -8,6 +8,13 @@
 
 ---
 
+## 📄 Complete Reference (Single File)
+
+> 🌟 **New!** All HTML and CSS notes have been compiled into one comprehensive reference file:
+> **[`HTML-CSS-Complete-Notes.md`](./HTML-CSS-Complete-Notes.md)** — Detailed GitHub-style notes with all topics, code examples, tables, and cheat sheets in one place.
+
+---
+
 ## 📁 Folder Structure
 
 ```
