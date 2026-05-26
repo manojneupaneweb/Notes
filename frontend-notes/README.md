@@ -1,5 +1,5 @@
 # 🎓 Frontend Development Notes
-### HTML · CSS · Tailwind CSS — Beginner to Advanced
+### HTML · CSS · Tailwind CSS · JavaScript — Beginner to Advanced
 
 ---
 
@@ -8,10 +8,11 @@
 
 ---
 
-## 📄 Complete Reference (Single File)
+## 📄 Complete Reference Files
 
-> 🌟 **New!** All HTML and CSS notes have been compiled into one comprehensive reference file:
-> **[`HTML-CSS-Complete-Notes.md`](./HTML-CSS-Complete-Notes.md)** — Detailed GitHub-style notes with all topics, code examples, tables, and cheat sheets in one place.
+> 🌟 All notes have been compiled into comprehensive single-file references:
+> - **[`HTML-CSS-Complete-Notes.md`](./HTML-CSS-Complete-Notes.md)** — All HTML & CSS notes in one place.
+> - **[`JavaScript-Complete-Notes.md`](./JavaScript-Complete-Notes.md)** — All JavaScript notes in one place.
 
 ---
 
@@ -19,7 +20,9 @@
 
 ```
 frontend-notes/
-├── README.md              ← You are here
+├── README.md                        ← You are here
+├── HTML-CSS-Complete-Notes.md
+├── JavaScript-Complete-Notes.md     ← 🆕 New!
 ├── html-notes/
 │   ├── 01-introduction.md
 │   ├── 02-basic-tags.md
@@ -30,17 +33,30 @@ frontend-notes/
 │   ├── 07-forms.md
 │   ├── 08-semantic-html.md
 │   └── 09-advanced-html.md
-└── css-notes/
+├── css-notes/
+│   ├── 01-introduction.md
+│   ├── 02-selectors.md
+│   ├── 03-colors-and-units.md
+│   ├── 04-box-model.md
+│   ├── 05-display-and-positioning.md
+│   ├── 06-flexbox.md
+│   ├── 07-grid.md
+│   ├── 08-responsive-design.md
+│   ├── 09-animations.md
+│   └── 10-tailwind-css.md
+└── js-notes/                        ← 🆕 New!
+    ├── README.md
     ├── 01-introduction.md
-    ├── 02-selectors.md
-    ├── 03-colors-and-units.md
-    ├── 04-box-model.md
-    ├── 05-display-and-positioning.md
-    ├── 06-flexbox.md
-    ├── 07-grid.md
-    ├── 08-responsive-design.md
-    ├── 09-animations.md
-    └── 10-tailwind-css.md
+    ├── 02-variables-and-data-types.md
+    ├── 03-operators.md
+    ├── 04-control-flow.md
+    ├── 05-loops.md
+    ├── 06-functions.md
+    ├── 07-arrays.md
+    ├── 08-objects.md
+    ├── 09-dom-manipulation.md
+    ├── 10-async-javascript.md
+    └── 11-es6-modern-features.md
 ```
 
 ---
@@ -85,6 +101,24 @@ frontend-notes/
 
 ---
 
+## 🟨 JavaScript Notes — Learning Path
+
+| # | File | Topics Covered | Level |
+|---|------|---------------|-------|
+| 01 | `01-introduction.md` | What is JS, inline/internal/external, `console.log` | 🟢 Beginner |
+| 02 | `02-variables-and-data-types.md` | `var`, `let`, `const`, strings, numbers, booleans, `typeof` | 🟢 Beginner |
+| 03 | `03-operators.md` | Arithmetic, comparison (`===`), logical (`&&`, `||`), ternary, `??` | 🟢 Beginner |
+| 04 | `04-control-flow.md` | `if`, `else if`, `switch`, truthy/falsy | 🟡 Beginner-Mid |
+| 05 | `05-loops.md` | `for`, `while`, `do...while`, `for...of`, `for...in`, `break`, `continue` | 🟡 Beginner-Mid |
+| 06 | `06-functions.md` | Declaration, expression, arrow functions, scope, callbacks, hoisting | 🟠 Intermediate |
+| 07 | `07-arrays.md` | `map`, `filter`, `reduce`, `slice`, `splice`, destructuring, spread | 🟠 Intermediate |
+| 08 | `08-objects.md` | Key-value pairs, methods, `Object.keys/values/entries`, classes | 🟠 Intermediate |
+| 09 | `09-dom-manipulation.md` | `querySelector`, change content/styles, create elements, events | 🟠 Intermediate |
+| 10 | `10-async-javascript.md` | Callbacks, Promises, `async/await`, `fetch()`, `Promise.all()` | 🔴 Advanced |
+| 11 | `11-es6-modern-features.md` | Template literals, spread/rest, `?.`, `??`, modules, `Map`, `Set` | 🔴 Advanced |
+
+---
+
 ## 📚 Recommended Learning Order
 
 ```
@@ -111,6 +145,18 @@ CSS Advanced (08-09)
     ▼
 Tailwind CSS (10)
     │   Learn: Utility-first framework
+    ▼
+JavaScript Basics (JS 01-05)
+    │   Learn: Variables, Operators, Loops, Control Flow
+    ▼
+JavaScript Core (JS 06-08)
+    │   Learn: Functions, Arrays, Objects
+    ▼
+DOM + Async (JS 09-10)
+    │   Learn: Manipulate the page, Fetch data
+    ▼
+Modern JS (JS 11)
+    │   Learn: ES6+ features
     ▼
 Build Projects! 🚀
 ```
