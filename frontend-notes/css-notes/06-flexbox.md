@@ -342,18 +342,35 @@ Only works when `flex-wrap: wrap` and there are multiple rows.
 
 ---
 
-## 📊 Flexbox Cheat Sheet
+## 📊 Flexbox Quick Reference
 
-| Property | On | Values |
-|---------|-----|--------|
-| `flex-direction` | Container | `row` / `column` / `row-reverse` / `column-reverse` |
-| `justify-content` | Container | `flex-start` / `center` / `flex-end` / `space-between` / `space-around` |
-| `align-items` | Container | `stretch` / `flex-start` / `center` / `flex-end` |
-| `flex-wrap` | Container | `nowrap` / `wrap` |
-| `gap` | Container | any size value |
-| `flex` | Item | `flex-grow flex-shrink flex-basis` (e.g., `1`) |
-| `align-self` | Item | `flex-start` / `center` / `flex-end` |
-| `order` | Item | any integer |
+- **Container:** `display: flex;`
+- **Direction:** `flex-direction: row` (horizontal) or `column` (vertical)
+- **Align Main Axis:** `justify-content`
+- **Align Cross Axis:** `align-items`
+- **Wrapping:** `flex-wrap: wrap`
+- **Spacing:** `gap`
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — The Perfect Center
+Create a `.container` `<div>` with a fixed height (e.g., `400px`) and a border. Inside it, place a single `.box` `<div>`.
+Use Flexbox on the container to perfectly center the box both vertically and horizontally.
+*(Hint: You only need 3 lines of CSS on the container!)*
+
+### Task 2 — The Navigation Bar
+Create a `<nav>` element containing a logo `<h1>` and a `<ul>` with 3 links.
+Use Flexbox on the `<nav>` to push the logo to the far left, and the links to the far right. Use `align-items` to make sure they are vertically centered.
+*(Hint: Use `justify-content: space-between`)*
+
+### Task 3 — The Responsive Card Grid
+Create a `.grid` container with 5 `.card` elements inside.
+- Set the container to `display: flex` and enable wrapping.
+- Add a `gap: 20px` to space them out.
+- Give each card a `flex-basis: 200px` and `flex-grow: 1`.
+- Resize your browser window and watch the cards automatically rearrange and resize themselves!
 
 ---
 

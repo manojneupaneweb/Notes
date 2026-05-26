@@ -258,40 +258,74 @@ a[href$=".pdf"] { color: red; }
 
 ---
 
-## 📊 Selector Specificity Chart
+## 📊 Selector Specificity — Simple Version
 
-| Selector | Specificity Points |
-|---------|-------------------|
-| Inline style | 1000 |
-| `#id` | 100 |
-| `.class`, `:pseudo-class`, `[attr]` | 10 |
-| `element`, `::pseudo-element` | 1 |
-| `*` Universal | 0 |
+Think of specificity like **points**. The rule with the most points wins:
+
+| Selector | Points | Example |
+|---------|--------|---------|
+| Inline style | 1000 | `style="color:red"` |
+| `#id` | 100 | `#header` |
+| `.class` | 10 | `.btn` |
+| `element` | 1 | `p`, `h1` |
 
 ```css
-/* Example: which color wins? */
-p { color: blue; }          /* Specificity: 1 */
-.text { color: green; }     /* Specificity: 10 */
-#para { color: red; }       /* Specificity: 100 */
-
-/* Answer: red wins because #id has highest specificity */
+/* Which wins? */
+p            { color: blue; }   /* 1 point  — loses */
+.text        { color: green; }  /* 10 points — beats element */
+#paragraph   { color: red; }    /* 100 points — wins! */
 ```
+
+> 💡 **Beginner tip:** Stick to **classes** for most styling. They're flexible and easy to understand.
 
 ---
 
 ## ✅ Key Takeaways
 
-| Selector | Syntax | Targets |
+| Selector | Syntax | Use When |
 |---------|--------|---------|
-| Element | `p` | All `<p>` tags |
-| Class | `.card` | All elements with `class="card"` |
-| ID | `#hero` | One element with `id="hero"` |
-| Universal | `*` | All elements |
-| Grouping | `h1, h2` | Multiple elements |
-| Descendant | `nav a` | `<a>` inside `<nav>` |
-| Child | `ul > li` | Direct children only |
-| Pseudo-class | `:hover` | State-based styling |
-| Pseudo-element | `::before` | Part of an element |
+| Element | `p` | Style ALL tags of that type |
+| Class | `.card` | Style specific components (reusable) |
+| ID | `#hero` | Style ONE unique element |
+| Grouping | `h1, h2` | Same style, multiple elements |
+| Descendant | `nav a` | Target elements inside another |
+| `:hover` | `a:hover` | Style on mouse hover |
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — Selector Practice Page
+Create a page with:
+- An `<h1>` (element selector → make it dark blue)
+- Two `<p>` tags — give them both a class `"text"` (class selector → `color: #555; line-height: 1.6`)
+- One special `<p>` with `id="intro"` (ID selector → `font-size: 20px; font-weight: bold`)
+
+Verify each selector works correctly in the browser.
+
+---
+
+### Task 2 — Hover Effects
+Create 3 buttons with class `"btn"`. Write CSS so:
+- Default state: `background: #4a90d9; color: white; padding: 10px 20px`
+- On hover (`:hover`): `background: #2c70b9; cursor: pointer`
+- On click (`:active`): `background: #1a5090`
+
+Observe the smooth state changes when you hover and click!
+
+---
+
+### Task 3 — Striped Table
+Create an HTML table with at least 5 rows. Use `nth-child` to:
+- Make **even rows** have a light gray background (`#f5f5f5`)
+- Make **odd rows** have a white background
+- Make the **first row** (header) have a blue background with white text
+
+```css
+tr:nth-child(even) { background: #f5f5f5; }
+tr:nth-child(odd)  { background: white; }
+tr:first-child     { background: #4a90d9; color: white; }
+```
 
 ---
 

@@ -239,10 +239,35 @@ margin: 10px 20px 30px;
 ## ✅ Key Takeaways
 
 - Every element is a box with: **Content → Padding → Border → Margin**.
-- **Padding** is space inside the border (background color applies here).
-- **Margin** is space outside the border (always transparent).
-- **Always set `box-sizing: border-box`** at the start of every project.
-- Use `margin: 0 auto` to horizontally center block elements.
+- **Padding** = inside space (pushes content inward).
+- **Margin** = outside space (pushes other elements away).
+- **Border** = the line between them.
+- **Always** use `box-sizing: border-box` so width includes padding/borders.
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — The Button
+Create a `<button>` element. Style it using the Box Model:
+- Give it `padding` (e.g., `10px` top/bottom, `20px` left/right)
+- Give it a `border` (e.g., `2px solid blue`)
+- Give it some `margin` to separate it from surrounding text
+- Give it a background color
+
+Notice how padding makes the button bigger from the inside, while margin pushes things away on the outside.
+
+### Task 2 — The Card Component
+Create a `<div>` with a class of `.card`.
+- Set `width: 300px`
+- Add a border and some padding inside.
+- Add `margin: 0 auto;` — watch how it perfectly centers itself horizontally!
+
+### Task 3 — The box-sizing Fix
+Create two `<div>` elements side by side. Give them both `width: 200px`.
+- Give the second one `padding: 40px` and a thick `border: 10px solid black`.
+- Notice how the second box is much wider than the first one.
+- Now add `box-sizing: border-box;` to the second box. Watch it shrink back to exactly 200px wide!
 
 ---
 

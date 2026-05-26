@@ -586,6 +586,28 @@ module.exports = {
 
 ---
 
+## 🏋️ Practice Tasks
+
+*(Use the CDN method from Part 1 to practice these tasks)*
+
+### Task 1 — The Tailwind Button
+Create a button without writing any custom CSS.
+Give it classes to make it: blue background (`bg-blue-500`), white text (`text-white`), rounded corners (`rounded-md`), and some padding (`px-4 py-2`).
+Then add a hover state: `hover:bg-blue-600`.
+
+### Task 2 — The Flexbox Layout
+Create a flex container (`flex`) with 3 child divs inside it.
+Use `justify-between` and `items-center` on the container to space them out.
+Give each child a different background color and a fixed size (like `w-24 h-24`).
+
+### Task 3 — The Responsive Grid
+Create a grid container (`grid`).
+Make it 1 column by default (`grid-cols-1`).
+Use a breakpoint to make it 3 columns on tablet screens and up (`md:grid-cols-3`).
+Add a gap between the columns (`gap-4`).
+
+---
+
 > 🎉 **Congratulations! You've completed the complete Frontend Development Notes!**
 >
 > **Review Order:**

@@ -315,12 +315,26 @@ This is the most intuitive way to define a full-page layout!
 | `grid-template-columns` | Define column sizes |
 | `grid-template-rows` | Define row sizes |
 | `gap` | Space between cells |
-| `grid-template-areas` | Named visual layout |
-| `grid-area` | Assign item to named area |
 | `grid-column: span 2` | Item spans 2 columns |
-| `grid-row: span 2` | Item spans 2 rows |
 | `repeat(3, 1fr)` | 3 equal columns |
-| `auto-fit` + `minmax` | Responsive columns automatically |
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — The 3-Column Layout
+Create a `.container` with 6 `.box` divs inside.
+Make it a grid with 3 equal columns using `repeat(3, 1fr)` and a `gap: 20px`.
+Notice how the items automatically wrap to the next row!
+
+### Task 2 — The Classic Sidebar Layout
+Create a layout with a sidebar on the left and main content on the right.
+Use `grid-template-columns: 250px 1fr;`.
+Watch how the sidebar stays 250px wide, but the main content stretches to fill the rest of the screen.
+
+### Task 3 — Spanning Columns
+In your 3-column layout from Task 1, select the first `.box` and add `grid-column: span 3;`.
+Watch how the first box now takes up the entire first row!
 
 ---
 

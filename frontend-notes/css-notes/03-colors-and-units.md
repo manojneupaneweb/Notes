@@ -100,144 +100,124 @@ h1 { color: hsl(240, 100%, 60%); }
 
 ---
 
-### CSS Custom Properties (Variables) — Best Practice
+### CSS Variables — Save Colors for Easy Reuse (Optional for Beginners)
 ```css
-/* Define your color palette once */
+/* Define your colors once at the top */
 :root {
-    --primary: hsl(220, 80%, 55%);
-    --primary-dark: hsl(220, 80%, 40%);
-    --text: hsl(0, 0%, 15%);
-    --bg: hsl(0, 0%, 98%);
-    --danger: hsl(0, 75%, 55%);
-    --success: hsl(140, 60%, 45%);
+    --blue:  #4a90d9;
+    --dark:  #2c3e50;
+    --light: #f9f9f9;
 }
 
-/* Use them everywhere */
-button { background: var(--primary); }
-button:hover { background: var(--primary-dark); }
-body { color: var(--text); background: var(--bg); }
+/* Use them anywhere */
+h1     { color: var(--dark); }
+button { background: var(--blue); }
+body   { background: var(--light); }
 ```
+> 💡 If you change `--blue` in one place, it updates everywhere!
 
 ---
 
 ## 📏 Part 2: CSS Units
 
-Units define the **size** of properties like `font-size`, `width`, `margin`, `padding`.
+Units define the **size** of things like width, font-size, spacing.
 
 ---
 
-### Absolute Units
+### The Main Units Beginners Need
 
-Fixed sizes — don't change based on screen or parent.
-
-| Unit | Full Name | Example | Use Case |
-|------|-----------|---------|----------|
-| `px` | Pixels | `font-size: 16px` | Most common — precise sizing |
-| `pt` | Points | `font-size: 12pt` | Print stylesheets |
-| `cm` / `mm` | Centimeters / Millimeters | `width: 10cm` | Print layouts only |
-
-```css
-/* px is the most common absolute unit */
-h1 { font-size: 48px; }
-.btn { padding: 12px 24px; border-radius: 6px; }
-```
-
----
-
-### Relative Units ✅ (Preferred for Responsive Design)
-
-Sizes that change relative to something else.
-
-#### `%` — Percentage
-Relative to the **parent element's** size.
+| Unit | What it means | Example |
+|------|--------------|---------|
+| `px` | Pixels — fixed size | `font-size: 16px` |
+| `%` | Percentage of parent | `width: 50%` |
+| `rem` | Based on root font size (usually 16px) | `font-size: 1.5rem` = 24px |
+| `vw` | % of screen width | `width: 100vw` |
+| `vh` | % of screen height | `height: 100vh` |
 
 ```css
-.container { width: 80%; }        /* 80% of parent width */
-.sidebar   { width: 25%; }        /* 25% of parent */
-.img       { max-width: 100%; }   /* Never wider than its container */
+/* px — precise, fixed */
+.border { border: 2px solid black; }
+
+/* % — flexible, relative to parent */
+.container { width: 80%; margin: 0 auto; }
+
+/* rem — great for font sizes (1rem = 16px by default) */
+h1 { font-size: 2rem; }    /* 32px */
+h2 { font-size: 1.5rem; }  /* 24px */
+p  { font-size: 1rem; }    /* 16px */
+
+/* vw/vh — full screen layouts */
+.hero { width: 100vw; height: 100vh; }
 ```
 
-#### `em` — Relative to parent font-size
-`1em` = the current element's font-size. Compounding can be tricky!
-
-```css
-body { font-size: 16px; }
-
-/* 2em = 2 × 16px = 32px */
-h1 { font-size: 2em; }
-
-/* Padding of 1em on h1 = 1 × 32px = 32px (uses h1's font-size!) */
-h1 { padding: 1em; }
-```
-
-> ⚠️ **Warning:** `em` compounds! A nested element with `font-size: 1.2em` inside another `font-size: 1.2em` = `1.2 × 1.2 = 1.44em` of the root.
-
-#### `rem` — Relative to root font-size ✅ (Recommended)
-`1rem` = the `<html>` element's font-size (usually 16px). Does NOT compound.
-
-```css
-html { font-size: 16px; } /* root = 16px */
-
-h1 { font-size: 3rem; }   /* 3 × 16px = 48px */
-h2 { font-size: 2rem; }   /* 2 × 16px = 32px */
-p  { font-size: 1rem; }   /* 1 × 16px = 16px */
-
-/* Pro tip: Set html to 62.5% to make 1rem = 10px */
-html { font-size: 62.5%; }
-h1   { font-size: 4.8rem; }  /* 4.8 × 10px = 48px — easy math! */
-```
-
-#### `vw` / `vh` — Viewport Width / Height
-`1vw` = 1% of the browser window width. `1vh` = 1% of the browser window height.
-
-```css
-/* Full-screen hero section */
-.hero {
-    width: 100vw;
-    height: 100vh;
-    background: #1a1a2e;
-}
-
-/* Text that scales with screen width */
-h1 { font-size: 5vw; }
-
-/* Viewport minimum/maximum */
-.box { width: 50vmin; } /* 50% of whichever is smaller: vw or vh */
-```
-
-#### `ch` — Width of the "0" character
-Useful for text content width.
-
-```css
-/* Readable text — limit line length to ~65 characters */
-p { max-width: 65ch; }
-```
+> 💡 **Beginner tip:** Use `px` for borders/spacing. Use `rem` for font sizes. Use `%` or `vw/vh` for widths.
 
 ---
 
 ## 📊 Units Quick Reference
 
 | Unit | Relative to | Best Use |
-|------|------------|---------|
-| `px` | Fixed | Precise spacing, borders |
-| `%` | Parent element | Flexible widths and heights |
-| `em` | Current font-size | Padding/margin relative to font |
-| `rem` | Root font-size | Font sizes, consistent spacing |
-| `vw` | Viewport width | Full-width layouts |
-| `vh` | Viewport height | Full-screen sections |
-| `ch` | Character width | Text container widths |
+|------|------------|---------| 
+| `px` | Fixed | Borders, precise spacing |
+| `%` | Parent element | Flexible widths |
+| `rem` | Root font-size (16px) | Font sizes |
+| `vw` | Screen width | Full-width layouts |
+| `vh` | Screen height | Full-screen sections |
 
 ---
 
 ## ✅ Key Takeaways
 
-- Use **HEX** for fixed brand colors.
-- Use **HSL** when designing custom color palettes — easiest to reason about.
-- Use **rgba/hsla** for transparency effects.
-- Use **CSS variables** (`--color`) for a maintainable color system.
-- Use **rem** for font sizes and most spacing.
-- Use **%** and **vw/vh** for responsive layouts.
-- Avoid hardcoding `px` for font sizes — use `rem` for accessibility.
+- Use **named colors** for quick tests, **HEX or HSL** for real projects.
+- `rgba(r, g, b, 0.5)` gives you a **semi-transparent** color.
+- Use `px` for small fixed sizes, `rem` for fonts, `%` for flexible widths.
+- `100vw` / `100vh` = full screen width/height.
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — Color Palette Card
+Create a page with 5 `<div>` boxes side by side (use `display: inline-block`). Give each a different background color using:
+- A **named color** (e.g., `tomato`)
+- A **HEX** color (e.g., `#4a90d9`)
+- An **RGB** color (e.g., `rgb(44, 62, 80)`)
+- An **RGBA** color (e.g., `rgba(255, 165, 0, 0.7)`)
+- An **HSL** color (e.g., `hsl(140, 60%, 45%)`)
+
+Each box should be `100px × 100px` with the color name written inside.
+
+---
+
+### Task 2 — Font Size Scale
+Create an `<h1>` through `<h4>` and a `<p>`. Set font sizes using `rem`:
+```css
+h1 { font-size: 2.5rem; }  /* 40px */
+h2 { font-size: 2rem; }    /* 32px */
+h3 { font-size: 1.5rem; }  /* 24px */
+h4 { font-size: 1.25rem; } /* 20px */
+p  { font-size: 1rem; }    /* 16px */
+```
+Open the browser and confirm you can see the clear size difference.
+
+---
+
+### Task 3 — Hero Section
+Create a full-screen hero section using `vw` and `vh`:
+```css
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    /* center the text — we'll learn flexbox soon! */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+```
+Put an `<h1>` inside with text like "Welcome to My Page".
 
 ---
 

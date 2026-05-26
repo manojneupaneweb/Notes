@@ -300,13 +300,35 @@ When elements overlap, `z-index` controls which one appears on top.
 
 ## 📊 Position Quick Reference
 
-| Value | Relative To | Stays in Flow? | Use Case |
-|-------|------------|---------------|---------|
-| `static` | Normal flow | ✅ Yes | Default (no positioning) |
-| `relative` | Its own position | ✅ Yes | Slight offsets, anchoring children |
-| `absolute` | Nearest positioned ancestor | ❌ No | Badges, dropdowns, tooltips |
-| `fixed` | Viewport | ❌ No | Navbars, chat buttons, back-to-top |
-| `sticky` | Viewport (after scroll) | ✅ Yes | Sticky headers, table headers |
+| Value | Stays in flow? | Best For |
+|-------|---------------|----------|
+| `static` | ✅ Yes | Default behavior |
+| `relative`| ✅ Yes | Moving slightly, anchoring absolute children |
+| `absolute`| ❌ No | Tooltips, badges, floating icons |
+| `fixed` | ❌ No | Navigation bars, floating buttons |
+| `sticky` | ✅ Yes | Headers that stick when scrolled |
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — Block vs Inline
+Create an `<h1>` and an `<a>` tag.
+- Try giving the `<a>` tag a width and height. Notice how it ignores them.
+- Change the `<a>` tag to `display: inline-block` or `display: block`. See how it suddenly respects the size!
+- Try giving the `<h1>` `display: inline`. See how it no longer takes up the full width.
+
+### Task 2 — The Floating Badge
+Create a `<div>` with a class `.card` (make it a colored square).
+- Put a `<span>` inside it with a class `.badge` (e.g., "SALE").
+- Set `.card` to `position: relative`.
+- Set `.badge` to `position: absolute` and position it in the top right corner using `top: -10px` and `right: -10px`.
+
+### Task 3 — The Sticky Header
+Create a tall page so you can scroll (add lots of paragraphs or a big `height` on body).
+- Create a `<nav>` at the top of the page.
+- Give it `position: sticky` and `top: 0`.
+- Scroll down the page and watch the nav bar stick to the top!
 
 ---
 

@@ -349,9 +349,25 @@ h1 { font-size: 1.8rem; }
 - Always add the `<meta name="viewport">` tag — without it, responsive CSS won't work on mobile!
 - Write **mobile-first** CSS, then use `min-width` media queries for larger screens.
 - Use **relative units** (`%`, `rem`, `vw`) instead of fixed `px` for flexible layouts.
-- Use `clamp()` for fluid typography that scales with the viewport.
-- Use `repeat(auto-fit, minmax())` for automatically responsive grids.
-- Support **dark mode** and **reduced motion** with media queries for better accessibility.
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — Media Query Color Changer
+Create a `<div>` and give it a background color of red.
+Write a media query so that when the screen is `min-width: 768px`, the background color changes to blue.
+Resize your browser window and watch the color switch!
+
+### Task 2 — Mobile-First Stacking
+Create a Flexbox container with 2 boxes.
+- By default (for mobile), make them stack vertically (`flex-direction: column`).
+- Add a media query for `min-width: 768px` that changes the container to `flex-direction: row` so they sit side-by-side on larger screens.
+
+### Task 3 — Fluid Typography
+Create an `<h1>` tag.
+Instead of setting `font-size` in `px`, set it using `vw` (e.g., `font-size: 5vw;`).
+Resize your browser window and watch the text smoothly grow and shrink with the screen!
 
 ---
 

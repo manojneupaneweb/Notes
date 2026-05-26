@@ -362,11 +362,30 @@ For **more complex animations** with multiple steps, use `@keyframes`.
 
 ## ✅ Key Takeaways
 
-- **Transitions** = smooth changes between two states (hover effects).
-- **Transform** = move/scale/rotate without affecting page layout.
-- **Keyframes** = complex multi-step animations.
-- Always use `transition: transform, opacity` (not `all`) for **performance**.
-- Respect user preferences: `@media (prefers-reduced-motion: reduce)` disables animations.
+- **Transitions** = smooth changes between two states (e.g., when you hover over a button).
+- **Transform** = move/scale/rotate an element without breaking the page layout.
+- **Keyframes** = multi-step, continuous animations (like a loading spinner).
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — The Growing Button
+Create a `<button>` with a background color and some padding.
+- Add a transition: `transition: transform 0.3s ease;`
+- On hover (`:hover`), add `transform: scale(1.1);`
+Watch the button smoothly grow when you mouse over it!
+
+### Task 2 — The Rotating Card
+Create a square `.card` div.
+- Give it a transition for `transform`.
+- On hover, rotate it slightly: `transform: rotate(5deg);`
+
+### Task 3 — The Loading Spinner
+Create a circular `<div>` (use `border-radius: 50%` and a border with one colored side).
+- Define a `@keyframes` animation named `spin` that goes from `rotate(0deg)` to `rotate(360deg)`.
+- Apply it to your circle: `animation: spin 1s linear infinite;`
+Congratulations, you just made a loading spinner!
 
 ---
 

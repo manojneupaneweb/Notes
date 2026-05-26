@@ -133,33 +133,35 @@ p {
 
 ## ⚡ CSS Cascade: Which Style Wins?
 
-The word "Cascading" means styles are applied in a specific order. When styles conflict, the browser follows these rules:
+When two CSS rules target the same element, CSS has a simple pecking order:
 
-### 1. Specificity (Most Important)
-More specific selectors beat less specific ones:
 ```
-Inline style > ID (#id) > Class (.class) > Element (h1, p)
+More specific = Wins!
+
+Inline style  >  #id  >  .class  >  element tag
+   (1000)        (100)    (10)          (1)
 ```
 
-### 2. Order
-Later rules override earlier ones (when specificity is equal):
+**Simple example:**
 ```css
-p { color: red; }   /* This is overridden */
-p { color: blue; }  /* This wins */
+p { color: blue; }       /* loses */
+.text { color: green; }  /* wins over element */
+#para { color: red; }    /* wins over class */
 ```
 
-### 3. `!important` (Use Sparingly!)
-Forces a rule to take priority. Avoid using this.
-```css
-p { color: red !important; } /* This beats everything */
-```
+> 💡 **Beginner tip:** When your style isn't working, check if something more specific is overriding it. Open **DevTools → Inspect** to see which rule wins.
+
+**Rule of thumb for beginners:**
+- Use **element selectors** for general styles (all `p`, all `h1`)
+- Use **class selectors** for specific components (`.btn`, `.card`)
+- Avoid `!important` — it causes confusion later
 
 ---
 
 ## 📊 Summary Table
 
 | Type | Where Written | Best For |
-|------|--------------|---------|
+|------|--------------|---------| 
 | Inline | Inside the HTML tag | Quick testing only |
 | Internal | `<style>` in `<head>` | Small, single pages |
 | External | Separate `.css` file | All real projects ✅ |
@@ -169,9 +171,40 @@ p { color: red !important; } /* This beats everything */
 ## ✅ Key Takeaways
 
 - CSS = style and design of HTML pages.
-- Always use **external CSS** for real projects.
-- CSS rule: `selector { property: value; }`
-- Styles cascade — more specific rules and later rules win conflicts.
+- A CSS rule = `selector { property: value; }`
+- Always use **external CSS** for real projects (separate `.css` file).
+- When styles conflict, the more **specific** rule wins.
+
+---
+
+## 🏋️ Practice Tasks
+
+### Task 1 — Your First Stylesheet
+1. Create `index.html` with an `<h1>`, a `<p>`, and a `<button>`
+2. Create `style.css` and link it with `<link rel="stylesheet" href="style.css">`
+3. In `style.css`, give the `<h1>` a color, the `<p>` a font-size, and the `<button>` a background color
+4. Open in browser — confirm styles are working ✅
+
+---
+
+### Task 2 — Three Types of CSS
+On the same page, apply the same style (`color: red`) using all 3 methods:
+- **Inline:** directly on an `<h2>` tag
+- **Internal:** inside a `<style>` tag in `<head>`
+- **External:** in your `style.css` file
+
+Then **remove inline and internal CSS** — use external only from now on!
+
+---
+
+### Task 3 — See the Cascade in Action
+Write these rules in order and observe which color wins on a `<p>` tag:
+```css
+p { color: blue; }
+p { color: red; }   /* Does this override blue? */
+```
+Then add a class `.special` with `color: green` to the `<p>`. Does green win?
+Write your conclusion as a comment in the CSS file.
 
 ---
 
