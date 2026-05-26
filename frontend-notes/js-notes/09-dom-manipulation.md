@@ -310,4 +310,41 @@ addBtn.addEventListener("click", () => {
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Background Color Changer
+Create an HTML page with 3 buttons: 🔴 Red, 🟢 Green, 🔵 Blue.
+When each button is clicked, change the `document.body` background color.
+Add a 4th **"Reset"** button that sets background back to white.
+
+```html
+<!-- Starter HTML -->
+<button id="btn-red">🔴 Red</button>
+<button id="btn-green">🟢 Green</button>
+<button id="btn-blue">🔵 Blue</button>
+<button id="btn-reset">Reset</button>
+```
+
+---
+
+### Task 2 — Click Counter
+Build a counter app with:
+- A `<p>` showing the current count (starts at 0)
+- An **Increment** button (+1)
+- A **Decrement** button (-1, minimum 0)
+- A **Reset** button (back to 0)
+- Change the count text color: green if > 0, red if 0
+
+---
+
+### Task 3 — Live Todo List
+Build a working todo list:
+1. Text input + "Add Task" button → adds `<li>` to a `<ul>`
+2. Each `<li>` has a ✅ checkbox — clicking it toggles a `line-through` style
+3. Each `<li>` has a 🗑️ delete button — clicking it removes that item
+4. Show count: `"Tasks: 3 remaining"` (updates live)
+5. Prevent adding empty tasks
+
+---
+
 > ➡️ **Next:** `10-async-javascript.md` — Fetching data and handling asynchronous code.

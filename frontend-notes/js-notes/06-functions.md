@@ -282,4 +282,47 @@ function addToTotal(n) {
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Temperature Converter
+Write **arrow functions** for temperature conversion:
+```javascript
+const celsiusToFahrenheit = (c) => /* your formula */;
+const fahrenheitToCelsius = (f) => /* your formula */;
+const celsiusToKelvin     = (c) => /* your formula */;
+
+// Test:
+console.log(celsiusToFahrenheit(100)); // 212
+console.log(fahrenheitToCelsius(32));  // 0
+console.log(celsiusToKelvin(0));       // 273.15
+```
+
+---
+
+### Task 2 — Palindrome Checker
+Write a function `isPalindrome(word)` that returns `true` if the word reads the same forwards and backwards.
+```javascript
+isPalindrome("racecar"); // true
+isPalindrome("hello");   // false
+isPalindrome("madam");   // true
+isPalindrome("level");   // true
+```
+**Hint:** Use `.split("").reverse().join("")`
+
+---
+
+### Task 3 — Higher-Order Function Practice
+Write a function `applyTwice(fn, value)` that applies a function to a value **twice**.
+```javascript
+const double  = n => n * 2;
+const addTen  = n => n + 10;
+const square  = n => n * n;
+
+applyTwice(double, 3);   // double(double(3)) = 12
+applyTwice(addTen, 5);   // addTen(addTen(5)) = 25
+applyTwice(square, 2);   // square(square(2)) = 16
+```
+
+---
+
 > ➡️ **Next:** `07-arrays.md` — Working with lists of data.

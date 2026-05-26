@@ -268,4 +268,49 @@ response.blob()   // parse as binary (images, files)
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — setTimeout Chain
+Create a countdown from 5 to 0 using `setTimeout` (not `setInterval`).
+Each number should appear 1 second after the previous one.
+```
+5... (after 1s)
+4... (after 2s)
+3... (after 3s)
+2... (after 4s)
+1... (after 5s)
+🚀 Go! (after 6s)
+```
+**Hint:** Use recursive setTimeout calls.
+
+---
+
+### Task 2 — Fetch User Profile
+Fetch a user from this free API and display their info:
+```javascript
+const url = "https://jsonplaceholder.typicode.com/users/1";
+
+// Fetch and log:
+// Name: Leanne Graham
+// Email: Sincere@april.biz
+// City: Gwenborough
+// Website: hildegard.org
+```
+Handle errors with `try/catch`. If the fetch fails, log `"Failed to load user"`.
+
+---
+
+### Task 3 — Parallel Fetch (Promise.all)
+Fetch **posts** and **users** from the API at the same time using `Promise.all`:
+```javascript
+const postsUrl = "https://jsonplaceholder.typicode.com/posts?_limit=5";
+const usersUrl = "https://jsonplaceholder.typicode.com/users?_limit=5";
+
+// After both load, log:
+// "Loaded 5 posts and 5 users"
+// Display the title of each post with the matching user's name
+```
+
+---
+
 > ➡️ **Next:** `11-es6-modern-features.md` — Essential modern JavaScript features.

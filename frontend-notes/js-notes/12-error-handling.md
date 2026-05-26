@@ -209,4 +209,46 @@ if (error) {
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Safe Division Function
+Write a function `safeDivide(a, b)` that:
+- Throws a `TypeError` if `a` or `b` is not a number
+- Throws a `RangeError` if `b` is 0
+- Returns the result if valid
+```javascript
+safeDivide(10, 2);     // 5
+safeDivide(10, 0);     // RangeError: Cannot divide by zero
+safeDivide("10", 2);   // TypeError: Both arguments must be numbers
+```
+Wrap each call in `try/catch` and log the error type and message.
+
+---
+
+### Task 2 — Form Validator with Custom Errors
+Create a `ValidationError` class (extends `Error`). Write a `validateUser(user)` function that validates:
+- `name` must be a non-empty string (min 2 chars)
+- `age` must be a number between 0 and 120
+- `email` must contain `"@"` and `"."`
+
+Throw a `ValidationError` with the field name for any rule that fails.
+```javascript
+validateUser({ name: "M", age: 25, email: "manoj@gmail.com" });
+// ValidationError: "name must be at least 2 characters" (field: "name")
+```
+
+---
+
+### Task 3 — Safe JSON Parser Utility
+Write a function `safeParse(jsonString, fallback = null)` that:
+- Returns the parsed object if JSON is valid
+- Returns the `fallback` value if JSON is invalid (no crash!)
+```javascript
+safeParse('{"name":"Manoj"}');   // { name: "Manoj" }
+safeParse("invalid{{json");      // null
+safeParse("bad", []);            // [] (custom fallback)
+```
+
+---
+
 > ➡️ **Next:** `13-closures.md`

@@ -226,4 +226,42 @@ for (let i = 1; i <= 3; i++) {
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Multiplication Table
+Using a `for` loop, print the multiplication table for any number.
+```javascript
+const num = 7;
+// Expected output:
+// 7 × 1 = 7
+// 7 × 2 = 14
+// ...
+// 7 × 10 = 70
+```
+
+---
+
+### Task 2 — Sum of Digits
+Given a number like `4567`, use a `while` loop to calculate the **sum of its digits**.
+```javascript
+let num = 4567;
+// Process: 4 + 5 + 6 + 7 = 22
+// Hint: use % 10 to get last digit, then Math.floor(num / 10) to remove it
+```
+
+---
+
+### Task 3 — Star Pattern (Nested Loop)
+Use nested `for` loops to print this triangle pattern for `n = 5`:
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+```
+**Bonus:** Also print the upside-down version (5 stars to 1 star).
+
+---
+
 > ➡️ **Next:** `06-functions.md` — Creating reusable blocks of code.

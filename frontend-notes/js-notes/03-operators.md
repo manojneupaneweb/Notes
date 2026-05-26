@@ -240,4 +240,42 @@ Like math — JavaScript follows BODMAS/PEMDAS:
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Mini Calculator
+Write a function `calculate(a, b)` that logs all 6 operations: `+`, `-`, `*`, `/`, `%`, `**`.
+Call it with `calculate(12, 4)` and verify the output.
+
+```
+12 + 4  = 16
+12 - 4  = 8
+12 * 4  = 48
+12 / 4  = 3
+12 % 4  = 0
+12 ** 4 = 20736
+```
+
+---
+
+### Task 2 — FizzBuzz
+Print numbers 1 to 30:
+- Divisible by 3 → `"Fizz"`
+- Divisible by 5 → `"Buzz"`
+- Divisible by both → `"FizzBuzz"`
+- Otherwise → the number
+
+Use the `%` (modulus) operator. (**Hint:** check FizzBuzz condition first!)
+
+---
+
+### Task 3 — Ternary Grade System
+Given `const score = 78`, use a **chained ternary** (no `if/else` allowed!) to log:
+- `≥ 90` → `"A — Excellent!"`
+- `≥ 75` → `"B — Good!"`
+- `≥ 60` → `"C — Average"`
+- `≥ 40` → `"D — Below Average"`
+- `< 40`  → `"F — Fail"`
+
+---
+
 > ➡️ **Next:** `04-control-flow.md` — Making decisions and repeating actions.

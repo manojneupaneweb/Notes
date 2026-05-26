@@ -236,4 +236,48 @@ counter(); // 3 ✅ persists between calls!
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Persistent Counter Factory
+Write a `makeCounter(start = 0, step = 1)` function that returns an object with `increment`, `decrement`, `reset`, and `value` (getter). Each counter should have its **own private count**.
+```javascript
+const c1 = makeCounter(10, 2);   // starts at 10, steps by 2
+const c2 = makeCounter();         // starts at 0, steps by 1
+
+c1.increment(); // 12
+c1.increment(); // 14
+c2.increment(); // 1
+console.log(c1.value); // 14
+console.log(c2.value); // 1  ← independent!
+```
+
+---
+
+### Task 2 — Greeting Factory
+Use closures to create a function factory `makeGreeter(greeting, punctuation = "!")`:
+```javascript
+const hello   = makeGreeter("Hello");
+const namaste = makeGreeter("Namaste", " 🙏");
+const bye     = makeGreeter("Goodbye", ".");
+
+hello("Manoj");     // "Hello, Manoj!"
+namaste("Sita");    // "Namaste, Sita 🙏"
+bye("Ram");         // "Goodbye, Ram."
+```
+
+---
+
+### Task 3 — Private Bank Account
+Using closures (no classes!), create a `createAccount(ownerName, initialBalance)` function that returns deposit, withdraw, getBalance, and getStatement methods. Balance must be **truly private** (not accessible from outside).
+```javascript
+const account = createAccount("Manoj", 1000);
+account.deposit(500);    // "Deposited 500. Balance: 1500"
+account.withdraw(200);   // "Withdrew 200. Balance: 1300"
+account.withdraw(9999);  // "Insufficient funds!"
+console.log(account.getBalance()); // 1300
+console.log(account.balance);      // undefined ← private!
+```
+
+---
+
 > ➡️ **Next:** `14-json.md`

@@ -137,4 +137,36 @@ console.log("Hello, World!");
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Your First JS File
+1. Create a file called `hello.js`
+2. Write three `console.log()` statements inside it:
+   - Your full name
+   - Your age
+   - The message: `"I am learning JavaScript!"`
+3. Create `index.html`, link `hello.js` with `<script src="hello.js"></script>`
+4. Open in browser and verify the output in the Console (F12)
+
+---
+
+### Task 2 — Explore the Browser Console
+Open Chrome DevTools (F12 → Console) and try these directly:
+```javascript
+console.log("Hello from the Console!");
+console.warn("This is a warning!");
+console.error("This is an error!");
+console.table([1, 2, 3]);
+```
+Observe the different colors and styles of each output.
+
+---
+
+### Task 3 — Inline vs External JS
+1. Create a button: `<button onclick="alert('Hello!')">Click Me</button>` — this is **inline JS**.
+2. Move that `alert` into an external `script.js` file using `addEventListener`.
+3. Compare both and write a comment in the file explaining which approach is better and why.
+
+---
+
 > ➡️ **Next:** `02-variables-and-data-types.md` — Learn how to store and work with data.

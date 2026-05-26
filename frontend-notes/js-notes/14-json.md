@@ -218,4 +218,49 @@ JSON supports only these types:
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Stringify & Parse Roundtrip
+```javascript
+const student = {
+  name: "Manoj",
+  age: 20,
+  grades: [85, 90, 78],
+  address: { city: "Kathmandu", zip: "44600" },
+  greet() { return "Hi!"; }  // ← watch what happens to this!
+};
+```
+1. Convert `student` to a JSON string and log it
+2. Pretty-print it with 2-space indentation
+3. Parse it back into an object and access `student.address.city`
+4. What happened to the `greet` method? Why?
+
+---
+
+### Task 2 — Save & Load Settings (localStorage)
+Build a simple settings system:
+```javascript
+const defaultSettings = { theme: "light", fontSize: 14, language: "en" };
+
+// 1. Save settings to localStorage as JSON
+// 2. Load them back from localStorage
+// 3. Update theme to "dark" and save again
+// 4. Load again and confirm theme is "dark"
+// 5. If nothing is in localStorage, use defaultSettings
+```
+
+---
+
+### Task 3 — Fetch & Display JSON from API
+Fetch the first 5 posts from `https://jsonplaceholder.typicode.com/posts?_limit=5`.
+For each post, log a formatted card:
+```
+📄 Post #1
+Title  : sunt aut facere repellat...
+Preview: quia et suscipit suscipit...
+```
+Handle the case where the fetch fails (simulate by using a bad URL and catch the error).
+
+---
+
 > 🎉 You now have all the JavaScript knowledge needed to start **React** or **Node.js**!

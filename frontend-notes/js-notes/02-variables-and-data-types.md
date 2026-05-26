@@ -270,4 +270,41 @@ false, 0, "", null, undefined, NaN
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Personal Info Variables
+Declare variables for: name (`const`), age (`let`), city (`const`), isStudent (`const`).
+Use a template literal to log a sentence like:
+```
+"Hi! I'm Manoj, 20 years old from Kathmandu. Student: true"
+```
+
+---
+
+### Task 2 — String Method Challenge
+Given `const str = "  Hello, JavaScript World!  "`, use string methods to:
+1. Remove the whitespace from both ends (`trim`)
+2. Count total characters (after trim)
+3. Replace `"JavaScript"` with `"JS"`
+4. Convert to lowercase
+5. Check if it starts with `"hello"` (case-insensitive tip: convert first!)
+
+---
+
+### Task 3 — Type Detective
+```javascript
+const values = [42, "42", true, null, undefined, 0, "", NaN, [], {}];
+```
+Loop through `values` and for each one log: `"value: X | type: Y | truthy/falsy: Z"`
+
+Expected output format:
+```
+value: 42        | type: number    | truthy
+value: "42"      | type: string    | truthy
+value: null      | type: object    | falsy
+...
+```
+
+---
+
 > ➡️ **Next:** `03-operators.md` — Performing calculations and comparisons.

@@ -191,4 +191,42 @@ if (items.length > 0) { } // ✅ better check for non-empty array
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Season Detector
+Given a month number (1–12), use `if/else if` to log the season:
+- Dec, Jan, Feb → `"❄️ Winter"`
+- Mar, Apr, May → `"🌸 Spring"`
+- Jun, Jul, Aug → `"☀️ Summer"`
+- Sep, Oct, Nov → `"🍂 Autumn"`
+
+Test with at least 4 different months.
+
+---
+
+### Task 2 — Ticket Price Calculator
+Movie ticket prices vary by age and day. Use nested `if/else`:
+```
+Age < 5     → Free
+Age 5–12    → Rs.100
+Age 13–59   → Rs.200 (weekday) or Rs.250 (weekend)
+Age 60+     → Rs.80
+```
+Write code for `age = 15` and `isWeekend = true`. Log the price.
+
+---
+
+### Task 3 — Simple ATM Machine (switch)
+Use a `switch` statement to simulate ATM options:
+```javascript
+const option = 2; // 1=Balance, 2=Withdraw, 3=Deposit, 4=Exit
+```
+- Case 1 → `"Your balance is Rs.5000"`
+- Case 2 → `"Enter amount to withdraw"`
+- Case 3 → `"Enter amount to deposit"`
+- Case 4 → `"Thank you! Goodbye 👋"`
+- Default → `"Invalid option. Try 1-4"`
+
+---
+
 > ➡️ **Next:** `05-loops.md` — Repeating code with for, while, and more.

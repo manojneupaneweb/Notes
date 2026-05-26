@@ -354,4 +354,56 @@ weakMap.set(key, "value");
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Refactor to Modern JS
+Rewrite this old-style code using **ES6+ features** (arrow functions, destructuring, template literals, default params, spread):
+```javascript
+// OLD CODE — rewrite this:
+function greetUser(user) {
+  var name = user.name;
+  var age  = user.age;
+  var city = user.address.city;
+  return "Hello " + name + "! You are " + age + " from " + city;
+}
+
+function mergeArrays(a, b) {
+  return a.concat(b);
+}
+
+function sumAll() {
+  var args = Array.prototype.slice.call(arguments);
+  return args.reduce(function(acc, n) { return acc + n; }, 0);
+}
+```
+
+---
+
+### Task 2 — Module System
+Split this code into 3 files using `import`/`export`:
+```javascript
+// Everything in one file — separate into: math.js, utils.js, main.js
+const PI = 3.14159;
+function circleArea(r) { return PI * r * r; }
+function capitalize(str) { return str[0].toUpperCase() + str.slice(1); }
+function clamp(n, min, max) { return Math.min(Math.max(n, min), max); }
+
+console.log(circleArea(5));
+console.log(capitalize("hello"));
+console.log(clamp(150, 0, 100));
+```
+
+---
+
+### Task 3 — Map and Set in Practice
+```javascript
+const votes = ["apple", "banana", "apple", "cherry", "banana", "apple", "cherry", "cherry", "cherry"];
+```
+1. Use a `Map` to count how many votes each fruit got
+2. Use a `Set` to get the list of unique fruits voted for
+3. Find the **winner** (most votes) using the Map
+4. Display: `"🏆 Winner: cherry with 4 votes"`
+
+---
+
 > 🎉 **Congratulations!** You've covered the core of JavaScript. Practice by building projects!

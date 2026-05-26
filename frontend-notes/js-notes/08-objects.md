@@ -298,4 +298,49 @@ students.find(s => s.name === "Ram"); // { name: "Ram", grade: 72 }
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Build a Student Object
+Create an object `student` with: `name`, `age`, `grades` (array), `address` (nested object with `city`, `country`), and a method `getAverage()` that returns the average of grades.
+```javascript
+// Expected usage:
+console.log(student.getAverage()); // e.g., 82.5
+console.log(`${student.name} lives in ${student.address.city}`);
+```
+
+---
+
+### Task 2 — Library Book System
+Given this array of books:
+```javascript
+const books = [
+  { title: "Clean Code",     author: "Robert Martin", year: 2008, available: true },
+  { title: "You Don't Know JS", author: "Kyle Simpson", year: 2015, available: false },
+  { title: "Eloquent JS",    author: "Marijn",        year: 2018, available: true }
+];
+```
+1. Use `Object.keys()` on the first book — what do you get?
+2. Get all **available** books using `filter`
+3. Display each book as: `"📖 Clean Code by Robert Martin (2008)"`
+4. Use destructuring inside the `map` callback
+
+---
+
+### Task 3 — Leaderboard with Classes
+Create a `Player` class with properties `name`, `score`, and a method `addScore(points)`.
+```javascript
+const p1 = new Player("Manoj", 0);
+const p2 = new Player("Sita",  0);
+
+p1.addScore(50);
+p1.addScore(30);
+p2.addScore(90);
+
+// Show leaderboard sorted by score (descending):
+// 1. Sita — 90 pts
+// 2. Manoj — 80 pts
+```
+
+---
+
 > ➡️ **Next:** `09-dom-manipulation.md` — Controlling the web page with JavaScript.

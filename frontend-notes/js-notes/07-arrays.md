@@ -246,4 +246,48 @@ Math.max(...[5, 3, 9, 1]); // 9 — same as Math.max(5, 3, 9, 1)
 
 ---
 
+## 🏋️ Practice Tasks
+
+### Task 1 — Student Grade Book
+```javascript
+const grades = [85, 42, 90, 73, 67, 95, 55, 88, 30, 78];
+```
+Using array methods (`filter`, `map`, `reduce`), find:
+1. The **average** grade
+2. All students who **passed** (grade ≥ 60)
+3. All grades **scaled up by 5%** (multiply each by 1.05, round to 1 decimal)
+4. The **highest** and **lowest** grade (use `Math.max` with spread)
+
+---
+
+### Task 2 — Shopping Cart
+```javascript
+const cart = [
+  { name: "Notebook", price: 150, qty: 2 },
+  { name: "Pen",      price: 20,  qty: 5 },
+  { name: "Bag",      price: 800, qty: 1 },
+  { name: "Eraser",   price: 10,  qty: 3 }
+];
+```
+1. Calculate the **total bill** (price × qty for each item, then sum all)
+2. Get an array of just the **item names**
+3. Filter items that cost **more than Rs.50**
+4. Sort cart by **price (ascending)**
+
+---
+
+### Task 3 — Unique Word Counter
+Given a paragraph string, count how many **unique words** it contains (case-insensitive).
+```javascript
+const text = "the quick brown fox jumps over the lazy dog the fox";
+// Steps:
+// 1. Split into words array
+// 2. Convert to lowercase
+// 3. Use Set to get unique words
+// 4. Count them
+// Output: "Total words: 10 | Unique words: 8"
+```
+
+---
+
 > ➡️ **Next:** `08-objects.md` — Storing related data in key-value pairs.
